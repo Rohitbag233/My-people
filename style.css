@@ -1,31 +1,64 @@
-/* style.css */
-
-
-/* Add background and overall styling */
-body {
-    background-color: #ffffff;
-    color: var(--text-color);
+/* Reset default margin and padding */
+body, html {
     margin: 0;
-    font-family: Arial, sans-serif;
-    
+    padding: 0;
 }
 
-/* Style the header */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #181818;
+    color: #ccc;  /* Adjust the color as needed */
+}
+
+.button {
+    background-color: aquamarine;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+    margin-left: 50%;
+}
+
+.button:hover {
+    background-color: lightblue;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+/* Header styles */
 .header {
-    background-color: var(--primary-color);
-    color: #fff;
+    background-color: #333;  /* Adjust the color as needed */
+    color: #fff;  /* Adjust the color as needed */
     padding: 20px;
     text-align: center;
 }
 
-/* Style the section title */
+/* Section title styles */
 .section-title {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-/* Style the team member cards */
+/* Team member card styles */
 .team-card {
     background-color: #fff;
     border-radius: 10px;
@@ -35,8 +68,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* Style team member images */
-.team-member-image {
+.team-card img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -44,37 +76,31 @@ body {
     margin-right: 10px;
 }
 
-/* Style team member details */
 .team-member-details {
     display: flex;
     align-items: center;
     padding: 10px;
 }
 
-/* Style team member name */
-.team-member-name {
+.team-member-details h2 {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-/* Style team member role */
-.team-member-role {
+.team-member-details p {
     font-size: 14px;
-    color: #ffffff;
+    color: #555;  /* Adjust the color as needed */
 }
 
-/* Add a hover effect to team cards */
 .team-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Add a media query for smaller screens */
+/* Media query for smaller screens */
 @media screen and (max-width: 768px) {
-    /* Adjust styles for smaller screens */
     .team-card {
         width: 100%;
     }
 }
-

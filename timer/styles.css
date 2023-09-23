@@ -1,0 +1,51 @@
+/* Logo */
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 70px;
+  width: auto;
+  color: #ccc;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #121212;
+}
+
+.countdown {
+  font-size: 36px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #181818;
+  box-shadow: 0 0 10px #ccc;
+  width: 80%; /* Adjust the width as needed */
+  max-width: 500px; /* Adjust the maximum width as needed */
+  margin-bottom: 20px; /* Space between countdown and music player */
+
+}
+
+.countdown-text {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #eee;
+}
+
+.countdown-value {
+  font-size: 1.5em;
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.colon {
+  font-size: 1.5em;
+  vertical-align: middle;
+  margin: 0 5px;
+}
