@@ -10,6 +10,17 @@ body {
     color: #ccc;  /* Adjust the color as needed */
 }
 
+/* Add this CSS to your existing styles.css or create a new CSS file and link it in your HTML */
+
+marquee {
+    width: 100%; /* Adjust the width as needed */
+    padding: 10px; /* Adjust the padding as needed */
+    background-color: #f0f0f02a; /* Adjust the background color as needed */
+    color: #ddd; /* Adjust the text color as needed */
+    font-size: 18px; /* Adjust the font size as needed */
+    font-weight: bold; /* Adjust the font weight as needed */
+  }
+  
 .button {
     background-color: aquamarine;
     padding: 8px;
