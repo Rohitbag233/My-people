@@ -45,6 +45,32 @@
   setInterval(updateCountdown, 1000);
   updateCountdown();
   
+//timetaken 
+
+function updateTimePassed() {
+  const startTime = new Date('December 5, 2006');
+  const now = new Date();
+
+  const timeDifference = now - startTime;
+
+  // Calculate years, months, days, hours, minutes, and seconds
+  const years = Math.floor(timeDifference / (1000 * 60 * 60 * 24 * 365.25));
+  const months = Math.floor(timeDifference / (1000 * 60 * 60 * 24 * 30.44)) % 12;
+  const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24)) % 30;
+  const hours = Math.floor((timeDifference / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((timeDifference / (1000 * 60)) % 60);
+  const seconds = Math.floor((timeDifference / 1000) % 60);
+
+  const timePassedElement = document.getElementById('time-passed');
+  timePassedElement.innerText = `${years} years, ${months} months, ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+}
+
+// Update time every second
+setInterval(updateTimePassed, 1000);
+
+// Call the function to update the time passed initially
+updateTimePassed();
+
 
 
 //musicplayer
