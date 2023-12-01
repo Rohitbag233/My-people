@@ -1,0 +1,65 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #161616;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Logo */
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 70px;
+    width: auto;
+  }
+
+.container {
+    text-align: center;
+    padding: 40px;
+    border-radius: 16px;
+    background-color: #272727; /* Darker background color for the container */
+    position: relative;
+    overflow: hidden;
+    border: 8px solid #00bcd4;
+    box-shadow: 0 0 20px rgba(0, 255, 8, 0.7);
+}
+
+button {
+    padding: 15px;
+    margin-top: 20px; /* Increased margin for more separation */
+    cursor: pointer;
+    background-color: #4caf50;
+    color: #161616;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px; /* Slightly increased font size for the button */
+    transition: background-color 0.3s; /* Smooth transition for the background color */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+h1 {
+    color: #ddd;
+}
+
+.net-worth {
+    font-size: 32px; /* Increased font size for the net worth */
+    color: #ccc; /* White text color for better contrast */
+    margin-top: 20px; /* Increased margin for more separation */
+}
+
+#particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+}
