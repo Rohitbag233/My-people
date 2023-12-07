@@ -2,7 +2,7 @@ let timerInterval;
 let timeTakenInterval;
 let startTime;
 
-// Time Stayed :- it means how much time i have spend in this earth.
+// Time Stayed: it means how much time I have spent on this Earth.
 function updateTimeTaken() {
   const now = new Date();
   const startDate = new Date('December 5, 2006, 15:48:00');
@@ -22,15 +22,9 @@ function updateTimeTaken() {
   timeTakenElement.innerText = ` ${years} years, ${months} months, ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
 }
 
-// Call your existing countdown update function every second
-timerInterval = setInterval(updateCountdown, 1000);
-
-// Call your time taken update function every second
-timeTakenInterval = setInterval(updateTimeTaken, 1000);
-
-// Countdown Timer :- it means how much time is left to live.
+// Countdown Timer: it means how much time is left to live.
 function updateCountdown() {
-  const targetDate = new Date("Wednesday, 4 May 2061, 14:15:00");
+  const targetDate = new Date('Wednesday, 4 May 2061, 14:15:00');
   const now = new Date();
 
   if (targetDate <= now) {
@@ -71,3 +65,9 @@ function updateCountdown() {
   const countdownElement = document.getElementById('countdown-timer');
   countdownElement.innerHTML = `${years} years, ${months} months, ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
 }
+
+// Call your existing countdown update function every second
+timerInterval = setInterval(updateCountdown, 1000);
+
+// Call your time taken update function every second
+timeTakenInterval = setInterval(updateTimeTaken, 1000);
