@@ -8,7 +8,8 @@ function getNetWorth() {
 
 
 
-    const specificNetWorth = 1000;          // Replace with your desired net worth
+    const specificNetWorth =
+ 1005                                   ;                                     // Replace with your desired net worth
 
 
 
