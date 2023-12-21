@@ -53,13 +53,3 @@ h1 {
     color: #ccc; /* White text color for better contrast */
     margin-top: 20px; /* Increased margin for more separation */
 }
-
-#particles {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    z-index: 1;
-}
