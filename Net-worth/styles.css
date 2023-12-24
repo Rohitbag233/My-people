@@ -1,3 +1,5 @@
+/* styles.css */
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #161616;
@@ -15,33 +17,36 @@ body {
     left: 10px;
     height: 70px;
     width: auto;
-  }
+}
 
 .container {
     text-align: center;
     padding: 40px;
     border-radius: 16px;
-    background-color: #272727; /* Darker background color for the container */
+    background-color: #272727;
     position: relative;
     overflow: hidden;
     border: 8px solid #00bcd4;
     box-shadow: 0 0 20px rgba(0, 255, 8, 0.7);
+    max-width: 600px; /* Set a maximum width for better readability on larger screens */
+    width: 90%; /* Adjust based on your design */
+    margin: auto; /* Center the container */
 }
 
 button {
     padding: 15px;
-    margin-top: 20px; /* Increased margin for more separation */
+    margin-top: 20px;
     cursor: pointer;
     background-color: #4caf50;
     color: #161616;
     border: none;
     border-radius: 8px;
-    font-size: 18px; /* Slightly increased font size for the button */
-    transition: background-color 0.3s; /* Smooth transition for the background color */
+    font-size: 18px;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #45a049;
 }
 
 h1 {
@@ -49,7 +54,29 @@ h1 {
 }
 
 .net-worth {
-    font-size: 32px; /* Increased font size for the net worth */
-    color: #ccc; /* White text color for better contrast */
-    margin-top: 20px; /* Increased margin for more separation */
+    font-size: 32px;
+    color: #ccc;
+    margin-top: 20px;
+}
+
+
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .net-worth {
+        font-size: 28px;
+        margin-top: 15px;
+    }
 }

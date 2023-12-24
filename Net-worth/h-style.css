@@ -1,0 +1,49 @@
+/* styles-history.css */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #161616;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Ensure a minimum height for small screens */
+}
+
+/* Logo */
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 70px;
+    width: auto;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Set the height of the container to 100% of the viewport height */
+}
+
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 10px; /* Further decreased padding for smaller screens */
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px; /* Adjusted padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 20px; /* Adjusted font size for smaller screens */
+    }
+
+    .net-worth {
+        font-size: 20px; /* Adjusted font size for smaller screens */
+        margin-top: 10px; /* Adjusted margin for smaller screens */
+    }
+}

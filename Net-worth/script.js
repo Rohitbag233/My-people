@@ -2,25 +2,17 @@
 const netWorthHistory = JSON.parse(localStorage.getItem('netWorthHistory')) || [];
 
 function getNetWorth() {
-    // Get the current date
     const currentDate = new Date().toLocaleDateString();
-
-    // Set your specific net worth value here
     const specificNetWorth = 1005; // Replace with your desired net worth
 
-    // Update the text content of the 'net-worth' element
     const netWorthElement = document.getElementById('net-worth');
     netWorthElement.textContent = `₹${specificNetWorth.toFixed(2)}`;
 
-    // Store net worth and date in local storage
     const netWorthData = { date: currentDate, value: specificNetWorth };
     netWorthHistory.push(netWorthData);
     localStorage.setItem('netWorthHistory', JSON.stringify(netWorthHistory));
 
-    // Animate the net worth
     animateNetWorth(netWorthElement, specificNetWorth);
-
-    // Update the net worth graph
     updateNetWorthGraph();
 }
 
