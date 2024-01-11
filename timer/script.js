@@ -71,3 +71,16 @@ timerInterval = setInterval(updateCountdown, 1000);
 
 // Call your time taken update function every second
 timeTakenInterval = setInterval(updateTimeTaken, 1000);
+
+
+// Add the following code after your existing JavaScript code
+
+// Get the audio element and volume slider element
+const audio = document.getElementById('background-music');
+const volumeSlider = document.getElementById('volume-slider');
+
+// Add an event listener to the volume slider
+volumeSlider.addEventListener('input', function () {
+  // Set the audio volume based on the slider value (between 0 and 1)
+  audio.volume = volumeSlider.value / 100;
+});
