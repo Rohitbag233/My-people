@@ -70,12 +70,81 @@ body {
   background-color: #121212;
 }
 
-
-/* Add styles for the volume slider */
+/* Ultimate fun and enjoyment styles for the volume slider */
 #volume-slider {
   width: 80%;
-  margin-top: 10px;
+  margin-top: 20px;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 10px;
+  background: linear-gradient(90deg, #ff0000, #ff8000, #ffff00, #80ff00, #00ff80, #0080ff, #8000ff, #ff00ff); /* Rainbow gradient background */
+  outline: none;
+  opacity: 0.8;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Glow effect */
+  animation: pulse 1.5s infinite alternate; /* Pulsating animation */
+  animation: shake 0.8s infinite alternate; /* Replacing bounce with shake effect */
 }
+
+#volume-slider:hover {
+  opacity: 1;
+}
+
+#volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  background: #ff00ff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  animation: spin 1s infinite linear; /* Spinning animation */
+}
+
+#volume-slider::-moz-range-thumb {
+  width: 30px;
+  height: 30px;
+  background: #ff00ff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  animation: spin 1s infinite linear; /* Spinning animation */
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-1px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(1px);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
 
 
 /* Responsive adjustments */
