@@ -2,6 +2,25 @@ let timerInterval;
 let timeTakenInterval;
 let startTime;
 
+const musicTracks = [
+  'mus/Interstellar-Theme1.mp3',
+  'mus/AnotherTrack.mp3',
+  'mus/YetAnotherTrack.mp3',
+  'mus/LinkinParkInTheEnd.mp3',
+  'mus/MemoryReboot.mp3',
+  'mus/TonyAnnTheInterstellarExperience.mp3',
+  'mus/VARDAANInstrumental.mp3',
+  'mus/Vengeance.mp3'
+];
+
+
+function playRandomTrack() {
+  const randomIndex = Math.floor(Math.random() * musicTracks.length);
+  const randomTrack = musicTracks[randomIndex];
+  audio.src = randomTrack;
+  audio.play();
+}
+
 // Time Stayed: it means how much time I have spent on this Earth.
 function updateTimeTaken() {
   const now = new Date();
@@ -72,8 +91,11 @@ timerInterval = setInterval(updateCountdown, 1000);
 // Call your time taken update function every second
 timeTakenInterval = setInterval(updateTimeTaken, 1000);
 
+// Play a random track when the page loads
+window.addEventListener('load', playRandomTrack);
 
-// Add the following code after your existing JavaScript code
+// Add an event listener to the audio element to play a random track when the current track ends
+audio.addEventListener('ended', playRandomTrack);
 
 // Get the audio element and volume slider element
 const audio = document.getElementById('background-music');
