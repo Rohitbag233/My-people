@@ -2,6 +2,22 @@ let timerInterval;
 let timeTakenInterval;
 let startTime;
 
+// Get the audio element and volume slider element
+const audio = document.getElementById('background-music');
+const volumeSlider = document.getElementById('volume-slider');
+
+// Play a random track when the page loads
+window.addEventListener('load', playRandomTrack);
+
+// Add an event listener to the audio element to play a random track when the current track ends
+audio.addEventListener('ended', playRandomTrack);
+
+// Add an event listener to the volume slider
+volumeSlider.addEventListener('input', function () {
+  // Set the audio volume based on the slider value (between 0 and 1)
+  audio.volume = volumeSlider.value / 100;
+});
+
 const musicTracks = [
   'mus/Interstellar-Theme1.mp3',
   'mus/AnotherTrack.mp3',
@@ -12,7 +28,6 @@ const musicTracks = [
   'mus/VARDAANInstrumental.mp3',
   'mus/Vengeance.mp3'
 ];
-
 
 function playRandomTrack() {
   const randomIndex = Math.floor(Math.random() * musicTracks.length);
@@ -90,19 +105,3 @@ timerInterval = setInterval(updateCountdown, 1000);
 
 // Call your time taken update function every second
 timeTakenInterval = setInterval(updateTimeTaken, 1000);
-
-// Play a random track when the page loads
-window.addEventListener('load', playRandomTrack);
-
-// Add an event listener to the audio element to play a random track when the current track ends
-audio.addEventListener('ended', playRandomTrack);
-
-// Get the audio element and volume slider element
-const audio = document.getElementById('background-music');
-const volumeSlider = document.getElementById('volume-slider');
-
-// Add an event listener to the volume slider
-volumeSlider.addEventListener('input', function () {
-  // Set the audio volume based on the slider value (between 0 and 1)
-  audio.volume = volumeSlider.value / 100;
-});
