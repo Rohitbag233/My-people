@@ -19,14 +19,14 @@ volumeSlider.addEventListener('input', function () {
 });
 
 const musicTracks = [
-  'mus/Interstellar-Theme1.mp3',
-  'mus/AnotherTrack.mp3',
-  'mus/YetAnotherTrack.mp3',
-  'mus/LinkinParkInTheEnd.mp3',
-  'mus/MemoryReboot.mp3',
-  'mus/TonyAnnTheInterstellarExperience.mp3',
-  'mus/VARDAANInstrumental.mp3',
-  'mus/Vengeance.mp3'
+  'Interstellar-Theme1.mp3',
+  'AnotherTrack.mp3',
+  'YetAnotherTrack.mp3',
+  'LinkinParkInTheEnd.mp3',
+  'MemoryReboot.mp3',
+  'TonyAnnTheInterstellarExperience.mp3',
+  'VARDAANInstrumental.mp3',
+  'Vengeance.mp3'
 ];
 
 function playRandomTrack() {
@@ -105,3 +105,30 @@ timerInterval = setInterval(updateCountdown, 1000);
 
 // Call your time taken update function every second
 timeTakenInterval = setInterval(updateTimeTaken, 1000);
+
+
+
+
+
+// Update sand timer based on the countdown timer
+function updateSandTimer() {
+  const countdownElement = document.getElementById('countdown-timer');
+  const countdownText = countdownElement.innerText;
+  const timeComponents = countdownText.split(', ');
+  const hours = parseInt(timeComponents[2].split(' ')[0]);
+  const minutes = parseInt(timeComponents[3].split(' ')[0]);
+  const seconds = parseInt(timeComponents[4].split(' ')[0]);
+
+  // Convert remaining time to seconds
+  const remainingSeconds = hours * 3600 + minutes * 60 + seconds;
+
+  // Set the sand timer animation duration based on the remaining time
+  const sandTimer = document.getElementById('sand-timer');
+  sandTimer.style.animationDuration = `${remainingSeconds}s`;
+}
+
+// Call the updateSandTimer function initially
+updateSandTimer();
+
+// Call the updateSandTimer function every second to keep the sand timer updated
+setInterval(updateSandTimer, 1000);
