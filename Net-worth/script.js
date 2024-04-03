@@ -3,7 +3,7 @@ const netWorthHistory = JSON.parse(localStorage.getItem('netWorthHistory')) || [
 
 function getNetWorth() {
     const currentDate = new Date().toLocaleDateString();
-    const specificNetWorth = 1600; // Replace with your desired net worth
+    const specificNetWorth = 1900; // Replace with your desired net worth
 
     const netWorthElement = document.getElementById('net-worth');
     netWorthElement.textContent = `₹${specificNetWorth.toFixed(2)}`;
